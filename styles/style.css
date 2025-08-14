@@ -1,0 +1,1366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+.error {
+    color: red;
+    display: block;
+    position: absolute;
+}
+body {
+    max-width: 100%;
+    min-height: 100vh;
+}
+button {
+    border: none;
+    background: none;
+}
+
+/*footer*/
+footer {
+    background: black;
+    color: white;
+    height: 21rem;
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -5rem;
+}
+.logo {
+    font-size: 4rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    align-items: center;
+}
+.subscribe {
+    text-align: center;
+}
+.subscribe h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+}
+footer p {
+    font-size: 1.2rem;
+    margin: 1em 0;
+}
+footer input {
+    background: black;
+    color: white;
+    border: 1px solid white;
+    padding: 1em;
+    width: 20rem;
+}
+.socials .fa-brands {
+    font-size: 30px;
+    margin: 0.7em;
+}
+.other {
+    display: flex;
+    justify-content: space-between;
+}
+.others {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    margin: 1.3em;
+}
+.others a {
+    text-decoration: none;
+    color: white;
+    margin: 0.7em 0;
+}
+
+/*login / signup*/
+.banner {
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: grid;
+    place-content: center;
+    padding: 2em 0;
+    background: url('./image/banner1.jpg');
+    background-size: cover;
+}
+.login, .signup {
+    border: 1px solid black;
+    padding: 2em;
+    width: 29rem;
+    height: 25rem;
+    background: white;
+    text-align: center;
+    position: relative;
+}
+.buyer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.buyer2 {
+    height: 28rem;
+    padding: 1em;
+}
+.signup {
+    width: 50rem;
+    height: 39rem;
+    padding: 1em;
+}
+.seller2 {
+    height: 35rem;
+}
+.login h3, .signup h3 {
+    font-size: 2rem;
+    padding: 0.5em 0;
+}
+.login p, .signup p {
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+form {
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+input[type=submit] {
+    width: 10rem;
+    padding: 0.7em;
+    margin: 0.5em 0;
+    background: black;
+    color: white;
+}
+input[type=radio] {
+    width: 1em;
+} 
+.radio {
+    text-align: left;
+    margin-left: -6.5em;
+}
+form input, textarea, select {
+    border: 2px solid black;
+    width: 20rem;
+    padding: 0.5em;
+    margin: 0.3em 0;
+}
+form p {
+    margin: 1em 0;
+}
+
+/*seller dashboard*/
+.dash {
+    display: flex;
+    z-index: -1;
+}
+
+/*side bar*/
+.side-bar, .cart {
+    width: 20%;
+    max-height: 100vh;
+    padding: 5em 2em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    z-index: 2;
+    top: 0;
+    position: sticky;
+}
+.side-bar ul li {
+    text-align: center;
+    list-style-type: none;
+    padding: 1em;
+    border-bottom: 1px solid grey;
+}
+.side-bar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+}
+.side-bar ul li:hover {
+    color: white;
+}
+.side-bar ul li a:hover li {
+    color: white;
+    background: black;
+}
+
+/*cart*/
+.cart {
+    width: 25%;
+    height: 100vh;
+    display: none;
+    background: white;
+    padding: 2em;
+    overflow-y: scroll;
+    z-index: 3;
+    position: fixed;
+    right: 0;
+    transition: 300ms;
+}
+.cart.toggle {
+    right: 0;
+    pointer-events: fill;
+}
+.fa-xmark {
+    font-size: 30px;
+}
+.proceed {
+    position: absolute;
+    bottom: 2em;
+}
+.proceed {
+    width: 16rem;
+    padding: 1em;
+    color: white;
+    background: black;
+}
+
+/*main page*/
+.main {
+    width: 80%;
+    padding: 1.5em;
+    background: #f5f5f5;
+}
+.main .menu {
+    display: flex;
+    justify-content: space-between;
+}
+.fa-cart-shopping {
+    font-size: 30px;
+    margin: 1em 0;
+}
+.main h5 a{
+    color: black;
+}
+.main h5 {
+    font-size: 1em;
+}
+.main .welcome {
+    margin: 2em 0;
+}
+.main h1 {
+    font-size: 2.5em;
+}
+.main h2 {
+    margin: 1em 0;
+}
+
+/*category btn*/
+.category {
+    padding: 2em 4em;
+    
+}
+.category form {
+    display: flex;
+}
+.category select {
+    width: 20rem;
+    height: 3em;
+}
+.category input[type=submit] {
+    border: 2px solid black;
+    width: 5rem;
+    height: 3em;
+    padding: 0.1em;
+}
+.category input[type=submit]:hover {
+    background: black;
+    color: white;
+}
+
+/*product*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 5em;
+}
+.product {
+    width: 20em;
+    height: 37em;
+    margin: 1.5em 0;
+    border: 2px solid black;
+    position: relative;
+}
+.product img {
+    height: 23em;
+}
+.desc {
+    padding: 1em;
+}
+.desc p {
+    margin-top: 1em;
+}
+.desc h5 {
+    margin-right: 2em;
+}
+.desc .below {
+    position: absolute;
+    display: flex;
+    bottom: -5em;
+    align-items: center;
+    justify-content: space-between;
+}
+img {
+    width: 100%;
+}
+.image {
+    position: relative;
+}
+.image .badge {
+    position: absolute;
+    background: black;
+    color: white;
+    border-radius: 4em;
+    padding: 0.5em;
+    z-index: 1;
+}
+.price {
+    left: 0.5em;
+    top: 0.5em;
+}
+.cat {
+    bottom: 0.5em;
+    right: 0.5em;
+}
+.cat a {
+    color: white;
+}
+.change-btn {
+    display: flex;
+    justify-content: space-between;
+}
+.product .btn {
+    margin: 1em 0;
+}
+.product .btn a{
+    color: black;
+    padding: 0.5em;
+}
+.product .btn a:hover, .add-to-cart:hover{
+    color: white;
+    background: black;
+}
+.add-to-cart {
+    background: #3e3e3e;
+    color: #fff;
+    padding: 0.5em;
+}
+.quantity {
+    width: 3em; 
+    padding: 0.37em 0.5em
+}
+
+/*add product*/
+.add-product {
+    display: grid;
+    place-content: center;
+}
+
+/*men women...*/
+.display {
+    padding: 3em;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+/*jerry's css*/
+/*welcome banner*/
+.welcome-banner{
+    padding: 1em 0;
+    text-align: center;
+    background-color: #262626;
+    color: #fff;
+    font-size: 2rem;
+    width: 100%;
+}
+/*nav*/
+nav{
+    border: 1px solid black;
+    padding: 1em 7em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul li{ 
+    list-style-type: none;
+    padding: 0px 20px ;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+}
+h1 a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: Impact;
+}
+ul li ul.dropdown li{
+    display: block;
+}
+ul li ul.dropdown{
+    width: 10em;
+    background: #fff;
+    border: 1px solid #3e3e3e;
+    position: absolute;
+    display: none;
+    line-height: 40px;
+}
+ul li:hover ul.dropdown {
+    display: block;
+    z-index: 3;
+}
+ul li ul.dropdown a:hover{
+    color:cadetblue;
+}
+.links .nav-btn a {
+    background: black;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em;
+}
+.links .nav-btn a:hover {
+    opacity: 0.7;
+}
+
+/*bag banner*/
+.bag-banner{
+    height: 35rem;
+    padding: 60px 0px 0px 50px ;
+    line-height: 30px;
+    background: url('image/bag.webp') no-repeat center center/cover;
+}
+.bag-banner-text {
+    padding: 5em;
+}
+.bag-banner-text p{
+    font-size: 1.5rem;
+    margin-top: 1em;
+}
+.bag-banner-text h2{
+    font-size: 3rem;
+    font-weight: 800;
+}
+.bag-banner-text .btn{
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 1em 2em;
+    background: #262626;
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+}
+.bag-banner-text .btn:hover {
+    opacity:0.8;
+}
+
+/*men and women sections*/
+.main-container {
+    padding: 2em ;
+}
+.main-container h1 {
+    text-align: center;
+    padding: 1em;
+    font-size: 3rem;
+}
+.main-container h2{
+    padding: 1em;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+}
+.main-container h2:hover {
+    text-decoration: underline;
+}
+.fa-arrow-right {
+    margin-left: 0.5em;
+}
+.all {
+    color: black;
+}
+.new {
+    display: flex;
+    justify-content: center;
+    padding: 4em 0;
+}
+.new h1 {
+    align-self: center;
+    text-align: center;
+}
+.new .product {
+    width: 19rem;
+    height: 20rem;
+    border: none
+}
+.new .arrivals{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-self: center;
+}
+.men, .women, .accessories, .footwear {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    place-items: center;
+}
+.men-content, .women-content, 
+.acc-content, .foot-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.avatar{
+    /* border: 1px solid black; */
+    height: 25rem;
+    width: 19rem;
+    padding: 200px 0px 0px 115px ;
+    position: relative;
+   
+}
+.avatar .layer {
+    width: 100%;
+    height: 25rem;
+    top: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    color: #262626;
+    font-weight: bold;
+}
+.layer:hover {
+    background: #262626;
+    opacity: 0.5;
+}
+.layer:hover .btn {
+    display: block;
+    opacity: 1;
+}
+.layer .btn {
+    display: none;
+    margin-top: 60%;
+    color: #fff;
+    font-size: 1.7rem;
+}
+.a{
+    background: url('image/men1.webp') no-repeat center center/cover;
+}
+.b{
+    background: url('image/men2.webp') no-repeat center center/cover;
+}
+.c{
+    background: url('image/men3.webp') no-repeat center center/cover;
+}
+.d{
+    background: url('image/men4.webp') no-repeat center center/cover;
+}
+.e{
+     background: url('image/women1.webp') no-repeat center center/cover;
+}
+.f{
+     background: url('image/women2.webp') no-repeat center center/cover;
+}
+.g{
+    background: url('image/women3.webp') no-repeat center center/cover;
+}
+.h{
+    background: url('image/women4.webp') no-repeat center center/cover;
+}
+.i{
+    background: url('image/access1.webp') no-repeat center center/cover;
+}
+.j{
+    background: url('image/access2.webp') no-repeat center center/cover;
+}
+.k{
+    background: url('image/access3.webp') no-repeat center center/cover;
+}
+.l{
+    background: url('image/access4.jpg') no-repeat center center/cover;
+}
+.m{
+    background: url('image/shoe1.webp') no-repeat center center/cover;
+}
+.n{
+    background: url('image/shoe2.webp') no-repeat center center/cover;
+}
+.o{
+    background: url('image/shoe3.webp') no-repeat center center/cover;
+}
+.p{
+    background: url('image/shoe4.webp') no-repeat center center/cover;
+}
+
+.banner2{
+    width: 100%;
+    padding: 1em;
+    font-size: 1.2rem;
+    background-color: #262626;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+.banner2 p a{
+    text-decoration: none;
+    color: #fff;
+}
+.banner2 p a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/*responsiveness*/
+@media only screen and (min-width:933px) and (max-width:1290px){
+    .error {
+        left: 14%;
+    }
+    .signup .error {
+        left: 0;
+    }
+    .dash {
+        display: flex;
+        flex-direction: column;
+    }
+    .login .error {
+        left: 10%;
+    }
+
+    
+    /*side bar*/
+    .side-bar, .cart {
+        width: 100%;
+        padding: 0;
+        background: white;
+    }
+    .side-bar ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 1rem;
+    }
+
+    /*main page*/
+    .main {
+        width: 100%;
+        padding: 1em;
+    }
+    .main .menu {
+        display: flex;
+        justify-content: space-between;
+    }
+    .fa-cart-shopping {
+        font-size: 30px;
+        margin: 1em 0;
+    }
+    .main h5 {
+        font-size: 1em;
+    }
+    .main .welcome {
+        margin: 2em 0;
+    }
+    .welcome p {
+        font-size: 1.5rem;
+    }
+    .main h1 {
+        font-size: 2.5em;
+    }
+    .main h2 {
+        margin: 1em 0;
+    }
+    /*product*/
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        padding: 3em 0;
+    }
+    .product {
+        width: 17em;
+        height: 35em;
+        margin: 1em;
+        border: 2px solid black;
+        position: relative;
+    }
+    .product img {
+        height: 19em;
+    }
+    .desc-text {
+        height: 4em;
+        overflow-y: scroll;
+        margin: 1em 0;
+    }
+    .desc {
+        padding: 1.5em;
+        font-size: 0.8rem;
+    }
+    .desc h4 {
+        font-size: 1rem;
+    }
+    .desc h5 {
+        font-size: 1em;
+    }
+    .desc .below {
+        position: absolute;
+        bottom: -7em;
+    }
+    .change-btn {
+        display: flex;
+        justify-content: space-between;
+    }
+    .btn {
+        margin: 1em 0;
+    }
+    .btn a{
+        color: black;
+        padding: 0.3em;
+    }
+    .btn a:hover{
+        color: white;
+        background: black;
+    }
+    .add-to-cart {
+        font-size: 0.9em;
+        bottom: 3.5em;
+    }
+    .quantity {
+        width: 3em; 
+        padding: 0.8em 0.5em;
+    }
+
+    /*category btn*/
+    .category select {
+        width: 20rem;
+        margin-top: 1.2em;
+        margin-right: -0.1em;
+    }
+    .category input[type=submit] {
+        border: 2px solid black;
+        width: 5rem;
+        height: 3em;
+        padding: 0.2em;
+    }
+    .category input[type=submit]:hover {
+        background: black;
+        color: white;
+    }
+
+    /*footer*/
+    footer {
+        height: 37rem;
+        padding: 3em 2em;
+        display: block;
+    }
+    .logo, .subscribe, .other {
+        float: left;
+    }
+    .logo {
+        font-size: 4.5rem;
+        display: block;
+        text-align: center;
+        padding: 1em 0;
+    }
+    .subscribe {
+        margin-top: 1em;
+        margin-left: 3em;
+    }
+    .subscribe h1 {
+        font-size: 2rem;
+    }
+    .other {
+        display: flex;
+        padding: 0 13em;
+    }
+    .others {
+        margin: 2em;
+    }
+
+    /*jerry's css*/
+    /*welcome banner*/
+    .welcome-banner{
+
+        font-size: 2rem;
+    }
+    /*nav*/
+    nav{
+        padding: 5em 2em;
+        justify-content: center;
+        font-size: 1rem;
+    }
+    nav ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-content: center;
+    }
+
+      /*men, women, new arrivals*/
+      .men-content, .women-content, 
+      .acc-content, .foot-content{
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+      }
+      .avatar{
+          /* border: 1px solid black; */
+          height: 25rem;
+          width: 19rem;
+          padding: 200px 0px 0px 115px ;
+          position: relative;
+         
+      }
+      .d, .h, .l, .p {
+          display: none;
+      } 
+      .new {
+          flex-direction: column;
+          justify-content: center;
+          padding: 4em 0;
+          background: #3e3e3e;
+          padding-bottom: 10em;
+      }
+      .new h1 {
+         font-size: 2.5rem;
+         color: #fff;
+      }
+      .new .product {
+          width: 15rem;
+          height: 18rem;
+          border: none
+      }
+      .new .arrivals{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          place-self: center;
+      }
+  
+      /*bag banner*/
+      .bag-banner-text {
+          padding: 4em 2em;
+      }
+
+      .radio { 
+        font-size: 1rem;
+        left: 10%;
+        padding: 1em 0;
+    }
+}
+
+@media only screen and (min-width:621px) and (max-width:932px){
+    .error {
+        left: 14%;
+    }
+    .dash {
+        display: flex;
+        flex-direction: column;
+    }
+    .login .error {
+        left: 10%;
+    }
+
+    
+    /*side bar*/
+    .side-bar, .cart {
+        width: 100%;
+        padding: 0;
+        background: white;
+    }
+    .side-bar ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 1rem;
+    }
+
+    /*main page*/
+    .main {
+        width: 100%;
+        padding: 1em;
+    }
+    .main .menu {
+        display: flex;
+        justify-content: space-between;
+    }
+    .fa-cart-shopping {
+        font-size: 30px;
+        margin: 1em 0;
+    }
+    .main h5 {
+        font-size: 1em;
+    }
+    .main .welcome {
+        margin: 2em 0;
+    }
+    .welcome p {
+        font-size: 1.5rem;
+    }
+    .main h1 {
+        font-size: 2.5em;
+    }
+    .main h2 {
+        margin: 1em 0;
+    }
+    /*product*/
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        padding: 3em 0;
+    }
+    .product {
+        width: 17em;
+        height: 35em;
+        margin: 1em;
+        border: 2px solid black;
+        position: relative;
+    }
+    .product img {
+        height: 19em;
+    }
+    .desc-text {
+        height: 4em;
+        overflow-y: scroll;
+        margin: 1em 0;
+    }
+    .desc {
+        padding: 1.5em;
+        font-size: 0.8rem;
+    }
+    .desc h4 {
+        font-size: 1rem;
+    }
+    .desc h5 {
+        font-size: 1em;
+    }
+    .desc .below {
+        position: absolute;
+        bottom: -7em;
+    }
+    .change-btn {
+        display: flex;
+        justify-content: space-between;
+    }
+    .btn {
+        margin: 1em 0;
+    }
+    .btn a{
+        color: black;
+        padding: 0.3em;
+    }
+    .btn a:hover{
+        color: white;
+        background: black;
+    }
+    .add-to-cart {
+        font-size: 0.9em;
+        bottom: 3.5em;
+    }
+    .quantity {
+        width: 3em; 
+        padding: 0.8em 0.5em;
+    }
+
+    /*category btn*/
+    .category select {
+        width: 20rem;
+        margin-top: 1.2em;
+        margin-right: -0.1em;
+    }
+    .category input[type=submit] {
+        border: 2px solid black;
+        width: 5rem;
+        height: 3em;
+        padding: 0.2em;
+    }
+    .category input[type=submit]:hover {
+        background: black;
+        color: white;
+    }
+
+    /*footer*/
+    footer {
+        height: 56rem;
+        padding: 2em;
+        padding-bottom: 7em;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .logo {
+        font-size: 5rem;
+        display: block;
+        text-align: center;
+        padding: 1em 0;
+    }
+    .subscribe h1 {
+        font-size: 2.5rem;
+    }
+    .other {
+        display: flex;
+        padding: 4em;
+    }
+    .others {
+        margin: 0.7em;
+    }
+
+    /*jerry's css*/
+    /*welcome banner*/
+    .welcome-banner{
+
+        font-size: 2rem;
+    }
+    /*nav*/
+    nav{
+        padding: 5em 2em;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 1rem;
+    }
+    nav ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-content: center;
+    }
+    
+      /*men, women, new arrivals*/
+      .men-content, .women-content, 
+      .acc-content, .foot-content{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+      }
+      .avatar{
+          height: 25rem;
+          width: 19rem;
+          padding: 200px 0px 0px 115px ;
+          position: relative;
+         
+      }
+     .c, .d, .g, .h, .k, .l, .o, .p {
+          display: none;
+      } 
+      .new {
+          flex-direction: column;
+          justify-content: center;
+          padding: 4em 0;
+          background: #3e3e3e;
+          padding-bottom: 10em;
+      }
+      .new h1 {
+         font-size: 2.5rem;
+         color: #fff;
+      }
+      .new .product {
+          width: 15rem;
+          height: 18rem;
+          border: none
+      }
+      .new .arrivals{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          place-self: center;
+      }
+  
+      /*bag banner*/
+      .bag-banner-text {
+          padding: 4em 2em;
+      }
+
+    /*login and signup*/
+    .banner {
+        padding: 2em 0;
+    }
+    .banner2 {
+        font-size: 1rem;
+    }
+    form, .buyer {
+        display: block;
+    }
+    .signup {
+        width: 30rem;
+        height: 66rem;
+    }
+    .seller2 {
+        height: 60rem;
+    }
+    .buyer2 {
+        height: 39rem;
+    }
+    .login {
+        height: 27rem;
+    }
+    form input, textarea, select {
+        margin: 0.7em;
+    }
+    input[type=submit] {
+        margin-top: 1em;
+    }
+    .signup [type=submit] {
+        margin-top: 1.5em;
+    }
+    .radio { 
+        font-size: 1rem;
+        margin-left: 3em;
+        padding: 1em 0;
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:620px) {
+    /*seller dashboard*/
+    .error {
+        font-size: 0.9rem;
+        left: 7%;
+    }
+    .dash {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*side bar*/
+    .side-bar, .cart {
+        width: 100%;
+        padding: 0;
+        background: white;
+    }
+    .side-bar ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 1rem;
+    }
+
+    /*category button*/
+    .category select {
+        width: 20rem;
+        margin-top: 1.5em;
+    }
+
+    /*main page*/
+    .main {
+        width: 100%;
+        padding: 1em;
+    }
+    .main .menu {
+        display: flex;
+        justify-content: space-between;
+    }
+    .fa-cart-shopping {
+        font-size: 30px;
+        margin: 1em 0;
+    }
+    .main h5 {
+        font-size: 1em;
+    }
+    .main .welcome {
+        margin: 2em 0;
+    }
+    .welcome p {
+        font-size: 1.5rem;
+    }
+    .main h1 {
+        font-size: 2.5em;
+    }
+    .main h2 {
+        margin: 1em 0;
+    }
+    /*product*/
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+        padding: 3em 0;
+    }
+    .product {
+        width: 17em;
+        height: 31em;
+        margin: 0.3em;
+        border: 2px solid black;
+        position: relative;
+        margin: 1.5em;
+    }
+    .product img {
+        height: 17em;
+    }
+    .desc {
+        padding: 0.7em;
+        font-size: 0.8rem;
+    }
+    .desc h4 {
+        font-size: 1rem;
+    }
+    .desc .below {
+        position: absolute;
+        bottom: -5em;
+    }
+    .change-btn {
+        display: flex;
+        justify-content: space-between;
+    }
+    .btn {
+        margin: 1em 0;
+    }
+    .btn a{
+        color: black;
+        padding: 0.3em;
+    }
+    .btn a:hover{
+        color: white;
+        background: black;
+    }
+    .add-to-cart {
+        font-size: 0.9em;
+        bottom: 3.5em;
+    }
+    .quantity {
+        width: 3em; 
+        padding: 0.8em 0.5em;
+    }
+
+    /*footer*/
+    footer {
+        height: 60rem;
+        padding: 2em 1em;
+        padding-bottom: 7em;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .logo {
+        font-size: 5rem;
+        display: block;
+        text-align: center;
+        padding: 1em 0;
+    }
+    .subscribe h1 {
+        font-size: 1.8rem;
+    }
+    .other {
+        display: flex;
+        padding: 0;
+    }
+    .others {
+        margin: 0.7em;
+    }
+
+    /*jerry's css*/
+    /*welcome banner*/
+    .welcome-banner{
+
+        font-size: 2rem;
+    }
+    /*nav*/
+    nav{
+        padding: 5em 2em;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 0.9em;
+    }
+    nav ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-content: center;
+    }
+    .nav-btn {
+        margin-top: 2em;
+    }
+   
+    /*men, women and new arrivals sections*/
+    .main-container {
+        padding: 1em;
+    }
+    .main-container h1 {
+        text-align: center;
+        padding: 1em;
+        font-size: 3rem;
+    }
+    .main-container h2{
+        font-size: 2rem;
+    }
+    .men, .women, .accessories, .footwear {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+    }
+    .men-content, .women-content, 
+    .acc-content, .foot-content{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .avatar{
+        /* border: 1px solid black; */
+        height: 25rem;
+        width: 19rem;
+        padding: 200px 0px 0px 115px ;
+        position: relative;
+       
+    }
+    .b, .c, .d, .f, .g, .h, .j, .k, .l, .n, .o, .p {
+        display: none;
+    } 
+    .new {
+        flex-direction: column;
+        justify-content: center;
+        padding: 4em 0;
+        background: #3e3e3e;
+        padding-bottom: 13em;
+    }
+    .new h1 {
+       font-size: 2.5rem;
+       color: #fff;
+    }
+    .new .product {
+        width: 17rem;
+        height: 20rem;
+        border: none
+    }
+    .new .arrivals{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        place-self: center;
+    }
+    .banner2{
+
+        font-size: 0.9rem;
+    }
+
+    /*jerry responsiveness*/
+    /*login and signup*/
+    .banner {
+        padding: 3em 0;
+        display: block;
+        margin: auto;
+    }
+    form, .buyer {
+        display: block;
+        padding: 1em;
+    }
+    .banner .signup, .login {
+        width: 100%;
+        height: 67rem;
+        padding: 1em;
+        border: none;
+    }
+    .buyer {
+        height: 57em;
+    }
+    .login {
+        margin: 7em 0;
+        height: 29rem;
+    }
+    form input, textarea, select {
+        width: 100%;
+        margin: 1em;
+    }
+    .signup input[type=submit] {
+        width: 7rem;
+        margin-top: 2.5em;
+    }
+    .signup h3{
+        font-size: 30px;
+    }
+    .radio {
+        text-align: left;
+        font-size: 1rem;
+        margin-left: 1em;
+        padding: 1em 0;
+    }
+    .banner .seller2 {
+        height: 51rem;
+    }
+}
