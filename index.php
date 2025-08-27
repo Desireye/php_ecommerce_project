@@ -1,5 +1,5 @@
 <?php 
-    $db = mysqli_connect("localhost:3307", "root", "", "mall") or die(mysqli_error($db));
+    include('db/db_config.php');
 
     $select = mysqli_query($db, "SELECT * FROM product ORDER BY date_created DESC LIMIT 4") or die(mysqli_error($db));
 ?>

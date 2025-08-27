@@ -1,5 +1,5 @@
 <?php
-    $db = mysqli_connect("localhost:3307", "root", "", "mall") or die(mysqli_error($db));
+    include('../db/db_config.php');
     
     session_start();
     $seller_id = $_SESSION['seller_id'];
